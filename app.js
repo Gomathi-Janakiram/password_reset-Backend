@@ -11,7 +11,7 @@ let DOMAIN_KEY="sandboxa84c1a3e4e4c4b2d9660e90a13cad0e9.mailgun.org"
 
 const API_KEY="12b14252707dc65d89539e12a12ddb97-95f6ca46-48672fea"
 let DOMAIN =DOMAIN_KEY;
-const mg = mailgun({ apiKey: process.env.API_KEY, domain: DOMAIN });
+const mg = mailgun({ apiKey: API_KEY, domain: DOMAIN });
 
 
 const dbURL = process.env.MONGO_URL||"mongodb://127.0.0.1:27017";
