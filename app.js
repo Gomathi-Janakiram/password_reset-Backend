@@ -7,10 +7,10 @@ const nodemailer = require("nodemailer")
 const mongoClient = mongodb.MongoClient;
 const app = express()
 const mailgun = require("mailgun-js")
-let DOMAIN="sandboxa84c1a3e4e4c4b2d9660e90a13cad0e9.mailgun.org"
+let DOMAIN_KEY="sandboxa84c1a3e4e4c4b2d9660e90a13cad0e9.mailgun.org"
 
 const API_KEY="12b14252707dc65d89539e12a12ddb97-95f6ca46-48672fea"
-let DOMAIN =DOMAIN;
+let DOMAIN =DOMAIN_KEY;
 const mg = mailgun({ apiKey: process.env.API_KEY, domain: DOMAIN });
 
 
