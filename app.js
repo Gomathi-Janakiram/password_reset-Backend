@@ -1,10 +1,8 @@
 const express = require("express")
-const mongoose = require("mongoose")
 const mongodb = require("mongodb")
 const bodyParser = require("body-parser")
 var bcrypt = require("bcrypt")
 require("dotenv").config();
-const cors = require("cors")
 const nodemailer = require("nodemailer")
 const mongoClient = mongodb.MongoClient;
 const app = express()
