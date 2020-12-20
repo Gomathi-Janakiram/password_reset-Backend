@@ -16,6 +16,8 @@ const mg = mailgun({ apiKey: process.env.API_KEY, domain: DOMAIN });
 
 const dbURL = process.env.MONGO_URL||"mongodb://127.0.0.1:27017";
 
+const port=process.env.PORT||
+
 app.use(bodyParser.json())
 // var urlencodedParser = bodyParser.urlencoded({ extended: true })
 app.set("view engine", "ejs")
