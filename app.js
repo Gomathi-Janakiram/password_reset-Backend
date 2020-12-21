@@ -7,20 +7,21 @@ const nodemailer = require("nodemailer")
 const mongoClient = mongodb.MongoClient;
 const app = express()
 const mailgun = require("mailgun-js")
-let DOMAIN_KEY="sandboxa84c1a3e4e4c4b2d9660e90a13cad0e9.mailgun.org"
+const cors=require("cors")
+let DOMAIN_KEY=process.env.DOMAIN_KEY
 
-const API_KEY="12b14252707dc65d89539e12a12ddb97-95f6ca46-48672fea"
+const API_KEY=process.env.API_KEY
 let DOMAIN =DOMAIN_KEY;
 const mg = mailgun({ apiKey: API_KEY, domain: DOMAIN });
 
 
 const dbURL = process.env.MONGO_URL||"mongodb://127.0.0.1:27017";
 
-const port=process.env.PORT||
+// const port=process.env.PORT||8000
 
 app.use(bodyParser.json())
 // var urlencodedParser = bodyParser.urlencoded({ extended: true })
-app.set("view engine", "ejs")
+// app.set("view engine", "ejs")
 
 app.use(cors())
 app.post("/login", async (req, res) => {
@@ -174,5 +175,5 @@ app.put('/newPassword', async (req, res) => {
 
 app.listen(8000, (err) => {
     if (err) throw err;
-    console.log(`Server started at ${process.env.PORT}`)
+    console.log(`Server started at 8000`)
 })
